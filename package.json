@@ -1,0 +1,29 @@
+{
+  "name": "backfire",
+  "version": "0.0.0",
+  "description": "An open-source backend-as-a-service inspired by firebase",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/**/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/backfire-app/backfire-app.git"
+  },
+  "keywords": [
+    "backend-as-a-service",
+    "BaaS",
+    "backfire",
+    "realtime",
+    "firebase"
+  ],
+  "author": "Addison Higham",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/backfire-app/backfire-app/issues"
+  },
+  "dependencies": {
+    "dependable": "~0.2.5",
+    "express": "~4.1.1"
+  }
+}
