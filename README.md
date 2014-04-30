@@ -1,4 +1,4 @@
-backfire-app
+backside
 ============
 
 An open-source backend-as-a-service inspired by firebase
@@ -7,13 +7,13 @@ An open-source backend-as-a-service inspired by firebase
 A backend-as-a-service allows you to create rich web apps without having to worry about the overhead of a backend
 service. They work great or a lot of use cases with simple persistence needs.
 
-Backfire is an open-source backend-as-a-service that is API compatible with firebase. This means that data is treated as
+backside is an open-source backend-as-a-service that is API compatible with firebase. This means that data is treated as
 a tree structure and any path in the tree can be "subscribed" to, which is then updated in real time.
 
 # Architecture
-Backfire is built using NodeJS, RabbitMQ, and websockets, which is a good fit for Node's ability to deal with lots of
+backside is built using NodeJS, RabbitMQ, and websockets, which is a good fit for Node's ability to deal with lots of
 IO.
-Additionally, Backfire is split up into multiple components, each in a separate repo and npm package. This allows for
+Additionally, backside is split up into multiple components, each in a separate repo and npm package. This allows for
 the various components to be easily used together, or run individually for scale or flexibility.
 
 These components are:
@@ -26,15 +26,15 @@ These components are:
   TODO: add in the proxy repo
 - HTTP API, the HTTP api is used for retrieving the state as well as publishing
 - Client Library, a client library that is API compatible with firebase
-- Administrative Frontend, allows for browsing the data as well as providing information about backfire
+- Administrative Frontend, allows for browsing the data as well as providing information about backside
 
 # Getting Started
-This repo contains everything you need to get started with backfire.
+This repo contains everything you need to get started with backside.
 
 ## Prerequisites
 1. Install RabbitMQ (follow the guide on http://www.rabbitmq.com/download.html)
-2. `npm install -g backfire`
-3. `backfire`
+2. `npm install -g backside`
+3. `backside`
 
 # Developing
 Websockets via socksjs
