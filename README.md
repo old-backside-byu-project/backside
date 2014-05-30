@@ -48,16 +48,29 @@ Config is done via environment variables and JSON with sensible defaults, in oth
 var port = process.env.PORT || config.port || 3000
 ```
 
-##
-API Layer
+## config
 
-WRITE
-msg (foo.bar.baz) -> database (written) -> SEND /topic/foo.bar.baz
+Backside is composed of two components, the backside-api and the backside-proxy.
 
-WRITE with AUTH and VALIDATION
+Each component is composed of multiple sub-modules
+Currently the depedencies look like this:
 
-READ
-SUBSCRIBE /topic/foo.bar.baz -> fetch state from db (send it) -> create subscription against queue
+Backside-api depends on:
+persistor interface (either memory or mongodb)
+messenger interface (amqp)
+auth interface (token auth and user pass auth)
+validator interface (rules)
 
+Together, these form the backside api, which is what the backside-proxy depends on.
 
-authorizeAndValidateRead(newData, userInfo,
+Each of the these sub-modules should be extracted into their own library, with the backside-api defining interfaces (either via
+a base class or just via documentation)
+
+At runtime, each of these can be submodules can be swapped out for a different implementation. However, some of the submodules
+depend on one another (and its not consistent from implementation to implementation),
+making dynamic instantation a bit difficult. This is where dependable comes in, it allows for registering a function
+that instantiates the abstract interface
+
+We want to support two primary use cases:
+1. JSON config used to power things, should be able to swap out major sub modules, like memory store for mongodb store
+2. Easy requiring as a module for composition that also opens up more options, like injecting your own implementation of an interface
