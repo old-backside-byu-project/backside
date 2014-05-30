@@ -23,7 +23,5 @@
     "url": "https://github.com/backfire-app/backfire-app/issues"
   },
   "dependencies": {
-    "dependable": "~0.2.5",
-    "express": "~4.1.1"
   }
 }

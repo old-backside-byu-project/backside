@@ -47,3 +47,17 @@ Config is done via environment variables and JSON with sensible defaults, in oth
 ```
 var port = process.env.PORT || config.port || 3000
 ```
+
+##
+API Layer
+
+WRITE
+msg (foo.bar.baz) -> database (written) -> SEND /topic/foo.bar.baz
+
+WRITE with AUTH and VALIDATION
+
+READ
+SUBSCRIBE /topic/foo.bar.baz -> fetch state from db (send it) -> create subscription against queue
+
+
+authorizeAndValidateRead(newData, userInfo,
