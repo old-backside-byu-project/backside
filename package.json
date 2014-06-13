@@ -23,5 +23,8 @@
     "url": "https://github.com/backfire-app/backfire-app/issues"
   },
   "dependencies": {
+    "blackcatmq": "0.0.7",
+    "backside-memory-store": "0.0.0",
+    "backside-proxy": "0.0.*"
   }
 }
