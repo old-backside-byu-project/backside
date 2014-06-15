@@ -1,6 +1,6 @@
 {
   "name": "backside",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "An open-source backend-as-a-service inspired by firebase",
   "main": "index.js",
   "scripts": {
@@ -30,13 +30,13 @@
   },
   "dependencies": {
     "blackcatmq": "0.0.7",
-    "backside-memory-store": "0.0.0",
+    "backside-memory-store": "0.0.*",
     "backside-proxy": "0.0.*",
     "lodash": "~2.4.1",
-    "backside-ruletree-security": "0.0.1",
-    "backside-token-auth": "0.0.0",
-    "backside-amqp-messenger": "0.0.1",
-    "backside-userpass-auth": "0.0.3",
-    "backside-mongo-store": "0.0.2"
+    "backside-ruletree-security": "0.0.*",
+    "backside-token-auth": "0.0.*",
+    "backside-amqp-messenger": "0.0.*",
+    "backside-userpass-auth": "0.0.*",
+    "backside-mongo-store": "0.0.*"
   }
 }
