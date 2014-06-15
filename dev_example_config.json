@@ -1,0 +1,34 @@
+{
+  "ports": {
+    "ws": 5000,
+    "tcp": 5001,
+    "api": 5010
+  },
+  "proxy": {
+    "STOMP_USERNAME": "guest",
+    "STOMP_PASSWORD": "guest",
+    "STOMP_EXCHANGE": "backside",
+    "SOCK_PREFIX": "/socks"
+  },
+  "api": {
+    "SESSION_SECRET": "default"
+  },
+  "store": {
+    "name": "memory"
+  },
+  "messenger": {
+    "name": "amqp",
+    "config": {
+      "url" : "amqp://localhost:5672"
+    }
+  },
+  "auth": {
+    "name": "userpass",
+    "config": {
+      "secret" : "really super secure secret here"
+    }
+  },
+  "security": {
+    "name": "ruletree"
+  }
+}

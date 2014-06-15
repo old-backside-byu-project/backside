@@ -1,32 +1,19 @@
 var stompServer = require("blackcatmq")
 var BacksideProxy = require("backside-proxy")
-var MemoryStore = require("backside-memory-store")
 var container = BacksideProxy.getContainer()
 
-container.register("store", function() {
-  return new MemoryStore()
-  console.log("stuff", MemoryStore)
-  return store
-})
-
-var WS_PORT = container.get("WS_PORT")
-var TCP_PORT = container.get("TCP_PORT")
-var API_PORT = container.get("API_PORT")
+var ports = require("./configBuilder").configure(container)
 
 var proxyServers = BacksideProxy.createServers()
 var apiServer = container.get("server")
 
-proxyServers.ws.listen(WS_PORT, function() {
-  console.log("started stomp websocket proxy on port " + WS_PORT)
+proxyServers.ws.listen(ports.ws, function() {
+  console.log("started stomp websocket proxy on port " + ports.ws)
 })
-proxyServers.tcp.listen(TCP_PORT, function() {
-  console.log("started stomp tcp proxy on port " + TCP_PORT)
+proxyServers.tcp.listen(ports.tcp, function() {
+  console.log("started stomp tcp proxy on port " + ports.tcp)
 })
-apiServer.listen(API_PORT, function() {
-  console.log("started api on port " + API_PORT)
+apiServer.listen(ports.api, function() {
+  console.log("started api on port " + ports.api)
 })
-
-
-
-
 

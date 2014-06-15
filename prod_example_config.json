@@ -1,0 +1,37 @@
+{
+  "ports": {
+    "ws": 5000,
+    "tcp": 5001,
+    "api": 5010
+  },
+  "proxy": {
+    "STOMP_USERNAME": "myUser",
+    "STOMP_PASSWORD": "myPassword",
+    "STOMP_EXCHANGE": "backside",
+    "SOCK_PREFIX": "/socks"
+  },
+  "api": {
+    "SESSION_SECRET": "QaTV5kM+4a7nJrT2eSF1/UZ08EPCtOT+"
+  },
+  "store": {
+    "name": "mongodb",
+    "config" : {
+      "url" : "mongodb://mongodb.mydomain.com/backside"
+    }
+  },
+  "messenger": {
+    "name": "amqp",
+    "config": {
+      "url" : "amqp://myUser:myPassword@rabbitmq.mydomain.com:5672"
+    }
+  },
+  "auth": {
+    "name": "userpass",
+    "config": {
+      "secret" : "QaTV5kM+4a7nJrT2eSF1/UZ08EPCtOT+"
+    }
+  },
+  "security": {
+    "name": "ruletree"
+  }
+}
