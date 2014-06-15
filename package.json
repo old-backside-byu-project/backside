@@ -20,7 +20,10 @@
     "realtime",
     "firebase"
   ],
-  "author": "Addison Higham",
+  "author": "Addison Higham <addisonj@gmail.com>  (http://github.com/addisonj)",
+  "contributors": [
+    "Trevor Dixon"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/backfire-app/backfire-app/issues"
