@@ -55,9 +55,9 @@ backside.child('users').child('bob').child('hairColor').set("gray")
 ## Docs
 The docs for the various components are found below:
 
-- (JS Library)[https://github.com/backside/backside-client] _WIP_
-- (HTTP API)[https://github.com/backside/backside-api/wiki/HTTP-API-Docs]
-- (STOMP Message Format)[https://github.com/backside/backside-proxy/wiki/Stomp-Message-Format]
+- JS Library: https://github.com/backside/backside-client _WIP_
+- HTTP API: https://github.com/backside/backside-api/wiki/HTTP-API-Docs
+- STOMP Message Format: https://github.com/backside/backside-proxy/wiki/Stomp-Message-Format
 
 
 ## Architecture
