@@ -5,10 +5,9 @@ An open-source backend-as-a-service inspired by firebase
 
 # Quickstart
 0. Install RabbitMQ (follow the guide on http://www.rabbitmq.com/download.html) and node.js (http://nodejs.org/)
-1. Install RabbitMQ ()
-2. Run `npm install -g backside`
-3. Run `backside`
-4. TODO: need a demo :)
+1. Run `npm install -g backside`
+2. Run `backside`
+3. TODO: need a demo :)
 
 # Description
 A backend-as-a-service allows you to create rich web apps without having to worry about the overhead of a custom backend
