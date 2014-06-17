@@ -52,6 +52,14 @@ backside.on("/users/bob", function(data) {
 backside.child('users').child('bob').child('hairColor').set("gray")
 ```
 
+## Docs
+The docs for the various components are found below:
+
+- (JS Library)[https://github.com/backside/backside-client] _WIP_
+- (HTTP API)[https://github.com/backside/backside-api/wiki/HTTP-API-Docs]
+- (STOMP Message Format)[https://github.com/backside/backside-proxy/wiki/Stomp-Message-Format]
+
+
 ## Architecture
 Backside is built using NodeJS and is composed of a few different projects. Currently, it uses MongoDB to store state,
 RabbitMQ to pass and route messages, and connects clients via websockets, TCP sockets, or HTTP.
